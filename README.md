@@ -1,7 +1,8 @@
 # Utilities
 Data Structures and Algorithms
 
-This repository is a collection of simple data structures, algorithms, and includes Python code for:
+This repository is a collection of simple data structures, algorithms, and 
+includes Python code for:
 - Node
 - Linked List
 - Doubly Linked List
