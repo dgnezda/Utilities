@@ -1,6 +1,7 @@
 def binary_search(sorted_list, target):
     if not sorted_list:
         return 'Value not found'
+
     mid_idx = len(sorted_list)//2
     mid_val = sorted_list[mid_idx]
     
@@ -19,6 +20,7 @@ def binary_search(sorted_list, target):
             return result
         return result + mid_idx + 1
   
+
 # testing:
 sorted_values = [13, 14, 15, 16, 17]
 print(binary_search(sorted_values, 16))

@@ -18,6 +18,7 @@ def binary_search(sorted_list, left_pointer, right_pointer, target):
         # reduce the sub-list by passing in a new left_pointer
         return binary_search(sorted_list, mid_idx + 1, right_pointer, target)
   
+  
 values = [77, 80, 102, 123, 288, 300, 540]
 start_of_values = 0
 end_of_values = len(values)

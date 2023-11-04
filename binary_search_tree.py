@@ -7,12 +7,14 @@ class BinarySearchTree:
       
     # Define .insert() below:
     def insert(self, value):
+
         if value < self.value:
             if not self.left:
                 self.left = BinarySearchTree(value, self.depth + 1)
                 print(f'Tree node {value} added to the left of {self.value} at depth {self.depth + 1}')
             else:
                 self.left.insert(value)
+
         else:
             if not self.right:
                 self.right = BinarySearchTree(value, self.depth + 1)
@@ -20,6 +22,7 @@ class BinarySearchTree:
             else:
                 self.right.insert(value)
   
+
 root = BinarySearchTree(100)
 
 # Insert values below:

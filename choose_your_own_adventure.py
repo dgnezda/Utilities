@@ -1,7 +1,9 @@
 print('You jumped out of a plane with a working parachute. You manage to land...')
-######
-# TREENODE CLASS
-######
+
+
+##################
+# TREENODE CLASS #
+##################
 class TreeNode:
     def __init__(self, story_piece):
         self.story_piece = story_piece
@@ -13,19 +15,24 @@ class TreeNode:
     def traverse(self):
         story_node = self
         print(story_node.story_piece)
+
         while len(story_node.choices) > 0:
             choice = int(input("Enter 1 or 2 to continue the story: "))
             valid_choices = [1, 2]
+
             if choice not in valid_choices:
                 print("Invalid input! Enter number '1' or '2'.")
                 continue
+
             else:
                 chosen_child = story_node.choices[choice - 1]
                 print(chosen_child.story_piece)
                 story_node = chosen_child
-######
-# VARIABLES FOR TREE
-######
+
+
+######################
+# VARIABLES FOR TREE #
+######################
 
 story_root = TreeNode("""
 You are in a forest clearing. There is a path to the left.
@@ -54,7 +61,7 @@ story_root.add_child(choice_a)
 story_root.add_child(choice_b)
 
 choice_a_1 = TreeNode("""
-The bear returns and tells you it's been a rough week. After making peace with
+The bear returns and tells you it's been a rough week. After making peace with
 a talking bear, he shows you the way out of the forest.
  
 YOU HAVE ESCAPED THE WILDERNESS.
@@ -77,7 +84,7 @@ YOU REMAIN LOST.
 """)
 
 choice_b_2 = TreeNode("""
-The bear understands and apologizes for startling you. Your new friend shows you a 
+The bear understands and apologizes for startling you. Your new friend shows you a 
 path leading out of the forest.
  
 YOU HAVE ESCAPED THE WILDERNESS.
@@ -86,8 +93,8 @@ YOU HAVE ESCAPED THE WILDERNESS.
 choice_b.add_child(choice_b_1)
 choice_b.add_child(choice_b_2)
 
-######
-# START GAME
-######
+##############
+# START GAME #
+##############
 
 story_root.traverse()

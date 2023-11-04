@@ -17,11 +17,15 @@ def binary_search(sorted_list, target, left_pointer, right_pointer):
     if mid_val < target:
         # reduce the sub-list by passing in a new left_pointer
         return binary_search(sorted_list, target, mid_idx + 1, right_pointer)
-  
-values = [77, 80, 102, 123, 288, 300, 540]
-start_of_values = 0
-end_of_values = len(values)
-target = 288
-result = binary_search(values, target, start_of_values, end_of_values)
 
-print(f"Value {target} found at index {result}")
+
+# For testing purpouses  
+if __name__ == "__main__":
+    values = [77, 80, 102, 123, 288, 300, 540]
+    start_of_values = 0
+    end_of_values = len(values)
+    target = 288
+    
+    result = binary_search(values, target, start_of_values, end_of_values)
+
+    print(f"Value {target} found at index {result}")

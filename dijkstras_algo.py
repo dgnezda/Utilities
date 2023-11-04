@@ -2,15 +2,6 @@ from heapq import heappop, heappush
 from math import inf
 
 
-graph = {
-        'A': [('B', 10), ('C', 3)],
-        'C': [('D', 2)],
-        'D': [('E', 10)],
-        'E': [],
-        'B': [('C', 3), ('D', 2)]
-    }
-
-
 def dijkstras(graph, start):
     distances = {}
     
@@ -33,5 +24,14 @@ def dijkstras(graph, start):
     return distances
 
 
-distances_from_a = dijkstras(graph, 'A')
-print(f"Shortest Distances: {distances_from_a}")
+if __name__ == "__main__":
+    graph = {
+        'A': [('B', 10), ('C', 3)],
+        'C': [('D', 2)],
+        'D': [('E', 10)],
+        'E': [],
+        'B': [('C', 3), ('D', 2)]
+    }
+
+    distances_from_a = dijkstras(graph, 'A')
+    print(f"Shortest Distances: {distances_from_a}")
