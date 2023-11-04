@@ -32,21 +32,22 @@ class TreeNode:
 
 
 ### TEST CODE TO PRINT TREE
-company = [
-    "Monkey Business CEO", 
-    "VP of Bananas", 
-    "VP of Lazing Around", 
-    "Associate Chimp", 
-    "Chief Bonobo", "Produce Manager", "Tire Swing R & D"]
-root = TreeNode(company.pop(0))
-for count in range(2):
-    child = TreeNode(company.pop(0))
-    root.add_child(child)
+if __name__ == "__main__":
+    company = [
+        "Monkey Business CEO", 
+        "VP of Bananas", 
+        "VP of Lazing Around", 
+        "Associate Chimp", 
+        "Chief Bonobo", "Produce Manager", "Tire Swing R & D"]
+    root = TreeNode(company.pop(0))
+    for count in range(2):
+        child = TreeNode(company.pop(0))
+        root.add_child(child)
 
-root.children[0].add_child(TreeNode(company.pop(0)))
-root.children[0].add_child(TreeNode(company.pop(0)))
-root.children[1].add_child(TreeNode(company.pop(0)))
-root.children[1].add_child(TreeNode(company.pop(0)))
-print("MONKEY BUSINESS, LLC.")
-print("=====================")
-print(root)
+    root.children[0].add_child(TreeNode(company.pop(0)))
+    root.children[0].add_child(TreeNode(company.pop(0)))
+    root.children[1].add_child(TreeNode(company.pop(0)))
+    root.children[1].add_child(TreeNode(company.pop(0)))
+    print("MONKEY BUSINESS, LLC.")
+    print("=====================")
+    print(root)
